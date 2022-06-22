@@ -8,12 +8,12 @@ Source code for paper "EDU-level Extractive Summarization with Varying Summary L
 - pyrouge 0.1.3
 - transformers 4.12.5
 - allennlp 2.8.0
-- [pythonrouge] (https://github.com/tagucci/pythonrouge)
+- [pythonrouge](https://github.com/tagucci/pythonrouge)
   - Please run command ```pytouge_set_rouge_path``` to setup the ROUGE package.
 - For more requirements, please check `requirements.txt`
 
 ## Pre-process
-- Data preparation: we adapt pre-processing steps from [DiscoBERT] (https://github.com/jiacheng-xu/DiscoBERT) to pre-process data.
+- Data preparation: we adapt pre-processing steps from [DiscoBERT](https://github.com/jiacheng-xu/DiscoBERT) to pre-process data.
 
 ## Train
 Setup model configuration at configuration file `config/model.json`. Run the following command to train model:
@@ -34,3 +34,6 @@ allennlp evaluate PATH-TO-model.tar.gz PATH-TO-test-dataset --output-file evalua
 ```
 Output:
 - `evaluation.txt`: testing result
+
+
+## Acknowledgements
