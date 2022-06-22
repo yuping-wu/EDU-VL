@@ -1,0 +1,8 @@
+PyTorch==1.8.0
+pyrouge==0.1.3
+transformers==4.12.5
+allennlp==2.8.0
+pythonrouge
+nltk
+spacy
+lxml
