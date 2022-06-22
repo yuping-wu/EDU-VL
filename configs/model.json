@@ -1,0 +1,53 @@
+{
+  "dataset_reader": {
+    "type": "my_dataset_reader",
+    "seed": 123,
+    "dataset_name": "cnndm",
+    "token_indexers": {
+      "transformer": {
+        "type": "pretrained_transformer",
+        "model_name": "facebook/bart-base"
+        }
+      },
+      "max_token": 1024,
+      "sum_unit": "edu",
+      "ground_truth_number": 8
+  },
+  "data_loader": {
+    "type": "multiprocess",
+    "batch_size" : 5,
+    "max_instances_in_memory": 15000,
+    "batches_per_epoch": 3000
+  },
+  "model": {
+    "type": "my_model",
+    "max_token": 1024,
+    "tmp_dir": "GETSum/tmp/",
+    "transformer_name": "facebook/bart-base",
+    "trigram_block": true,
+    "min_pred_unit": 6,
+    "max_pred_unit": 10,
+    "sum_unit": "edu"
+  },
+  "train_data_path": "Datasets/CNNDM/train/",
+  "validation_data_path": "Datasets/CNNDM/valid/",
+  "trainer": {
+    "cuda_device": 0,
+    "grad_clipping": 5,
+    "num_epochs": 100,
+    "optimizer": {
+      "type": "adam",
+      "lr": 1e-05,
+      "weight_decay": 0.0001
+    },
+    "patience": 10,
+    "should_log_learning_rate": true,
+    "summary_interval": 1000,
+    "validation_metric": "+R_2",
+    "run_confidence_checks": false
+  },
+  "validation_data_loader": {
+    "type": "multiprocess",
+    "batch_size" : 60
+  }
+}
