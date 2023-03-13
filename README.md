@@ -1,5 +1,5 @@
 # EDU-VL
-Source code for paper "EDU-level Extractive Summarization with Varying Summary Lengths".
+Source code for EACL 2023 Findings paper "[EDU-level Extractive Summarization with Varying Summary Lengths](https://arxiv.org/abs/2210.04029)".
 
 ## Environment
 - OS: CentOS Linux release 7.9.2009 (Core)
@@ -98,5 +98,11 @@ allennlp evaluate PATH-TO-model.tar.gz PATH-TO-test-dataset --output-file evalua
 Output:
 - `evaluation.txt`: testing result
 
-## Acknowledgements
+## Citing
+```
 TBD
+```
+
+
+## Acknowledgements
+- Data processing steps are based on codes in [DiscoBERT](https://github.com/jiacheng-xu/DiscoBERT).
