@@ -24,6 +24,14 @@
     "max_token": 1024,
     "tmp_dir": "GETSum/tmp/",
     "transformer_name": "facebook/bart-base",
+     "transformer_encoder":{
+      "type": "ExtTransformerEncoder",
+      "d_model": 768,
+      "d_ff": 2048,
+      "heads": 8,
+      "dropout": 0.1,
+      "num_inter_layers": 2
+    },
     "trigram_block": true,
     "min_pred_unit": 6,
     "max_pred_unit": 10,
