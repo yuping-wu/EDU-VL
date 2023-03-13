@@ -22,10 +22,10 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser( )
     parser.add_argument("finetune", type=str2bool, nargs='?',const=True,default=False)
     args = parser.parse_args()
-    if os.path.isdir('text_summarization/Model'):
-        root = "text_summarization/Model"
+    if os.path.isdir(os.getcwd()):
+        root = os.getcwd()
     else:
-        raise NotImplementedError("Please specify root directory.")
+        raise NotImplementedError("Please specify root directory by encoding in the main.py file.")
 
     params = Params.from_file(os.path.join(root, 'configs/model.json'))
     print(params.params)
