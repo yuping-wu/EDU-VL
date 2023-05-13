@@ -1,5 +1,5 @@
 # EDU-VL
-Source code for EACL 2023 Findings paper "[EDU-level Extractive Summarization with Varying Summary Lengths](https://arxiv.org/abs/2210.04029)".
+Source code for EACL 2023 Findings paper "[EDU-level Extractive Summarization with Varying Summary Lengths](https://aclanthology.org/2023.findings-eacl.123/)".
 
 ## Environment
 - OS: CentOS Linux release 7.9.2009 (Core)
@@ -100,7 +100,23 @@ Output:
 
 ## Citing
 ```
-TBD
+@inproceedings{wu-etal-2023-edu,
+    title = "{EDU}-level Extractive Summarization with Varying Summary Lengths",
+    author = "Wu, Yuping  and
+      Tseng, Ching-Hsun  and
+      Shang, Jiayu  and
+      Mao, Shengzhong  and
+      Nenadic, Goran  and
+      Zeng, Xiao-Jun",
+    booktitle = "Findings of the Association for Computational Linguistics: EACL 2023",
+    month = may,
+    year = "2023",
+    address = "Dubrovnik, Croatia",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2023.findings-eacl.123",
+    pages = "1655--1667",
+    abstract = "Extractive models usually formulate text summarization as extracting fixed top-k salient sentences from the document as a summary. Few works exploited extracting finer-grained Elementary Discourse Unit (EDU) with little analysis and justification for the extractive unit selection. Further, the selection strategy of the fixed top-k salient sentences fits the summarization need poorly, as the number of salient sentences in different documents varies and therefore a common or best k does not exist in reality. To fill these gaps, this paper first conducts the comparison analysis of oracle summaries based on EDUs and sentences, which provides evidence from both theoretical and experimental perspectives to justify and quantify that EDUs make summaries with higher automatic evaluation scores than sentences. Then, considering this merit of EDUs, this paper further proposes an EDU-level extractive model with Varying summary Lengths (EDU-VL) and develops the corresponding learning algorithm. EDU-VL learns to encode and predict probabilities of EDUs in the document, generate multiple candidate summaries with varying lengths based on various k values, and encode and score candidate summaries, in an end-to-end training manner. Finally, EDU-VL is experimented on single and multi-document benchmark datasets and shows improved performances on ROUGE scores in comparison with state-of-the-art extractive models, and further human evaluation suggests that EDU-constituent summaries maintain good grammaticality and readability.",
+}
 ```
 
 
